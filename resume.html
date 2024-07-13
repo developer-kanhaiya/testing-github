@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea to Frontend Display</title>
+    <style>
+        #displayArea {
+            white-space: pre-wrap;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="inputText" rows="10" cols="30"></textarea>
+    <button onclick="displayText()">Display Text</button>
+    <div id="displayArea"></div>
+
+    <script>
+        function displayText() {
+            const inputText = document.getElementById('inputText').value;
+            const displayArea = document.getElementById('displayArea');
+            displayArea.textContent = inputText;
+        }
+    </script>
+</body>
+</html>
